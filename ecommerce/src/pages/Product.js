@@ -1,17 +1,23 @@
-import { Add, Remove } from "@material-ui/icons";
+import React from "react";
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
+import Announcements from "../components/Announcements";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
-import { mobile } from "../responsive";
+// import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+// import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
+import RemoveOutlined from "@mui/icons-material/RemoveOutlined";
+import AddOutlined from "@mui/icons-material/AddOutlined";
+import { mobile } from "../Responsive";
+
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
-  ${mobile({ padding: "10px", flexDirection:"column" })}
+  ${mobile({ padding: "10px", flexDirection: "column" })}
+
 `;
 
 const ImgContainer = styled.div`
@@ -108,7 +114,7 @@ const Button = styled.button`
   border: 2px solid teal;
   background-color: white;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 700;
 
   &:hover{
       background-color: #f8f4f4;
@@ -119,7 +125,7 @@ const Product = () => {
   return (
     <Container>
       <Navbar />
-      <Announcement />
+      <Announcements />
       <Wrapper>
         <ImgContainer>
           <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
@@ -154,9 +160,9 @@ const Product = () => {
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
-              <Remove />
+              <RemoveOutlined />
               <Amount>1</Amount>
-              <Add />
+              <AddOutlined />
             </AmountContainer>
             <Button>ADD TO CART</Button>
           </AddContainer>

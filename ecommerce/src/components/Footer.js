@@ -1,18 +1,16 @@
-import {
-  Facebook,
-  Instagram,
-  MailOutline,
-  Phone,
-  Pinterest,
-  Room,
-  Twitter,
-} from "@material-ui/icons";
+
+import React from 'react';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import RoomIcon from '@mui/icons-material/Room';
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import PhoneIcon from '@mui/icons-material/Phone';
+import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 
 const Container = styled.div`
   display: flex;
-  ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -47,7 +45,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({ display: "none" })}
+  
 `;
 
 const Title = styled.h3`
@@ -60,6 +58,7 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  cursor: pointer;
 `;
 
 const ListItem = styled.li`
@@ -70,7 +69,6 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({ backgroundColor: "#fff8f8" })}
 
 `;
 
@@ -80,9 +78,7 @@ const ContactItem = styled.div`
   align-items: center;
 `;
 
-const Payment = styled.img`
-    width: 50%;
-`;
+
 
 const Footer = () => {
   return (
@@ -96,16 +92,16 @@ const Footer = () => {
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
-            <Facebook />
+            <FacebookIcon />
           </SocialIcon>
           <SocialIcon color="E4405F">
-            <Instagram />
+            <InstagramIcon />
           </SocialIcon>
           <SocialIcon color="55ACEE">
-            <Twitter />
+            <TwitterIcon />
           </SocialIcon>
           <SocialIcon color="E60023">
-            <Pinterest />
+            <PinterestIcon />
           </SocialIcon>
         </SocialContainer>
       </Left>
@@ -127,15 +123,15 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+          <RoomIcon style={{ marginRight: "10px" }} /> 1407 Bernard st, Denton 76201
         </ContactItem>
         <ContactItem>
-          <Phone style={{marginRight:"10px"}}/> +1 234 56 78
+          <PhoneIcon style={{ marginRight: "10px" }} /> +1 234 56 78
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
+          <MailOutlinedIcon style={{ marginRight: "10px" }} /> Sumanth@React
         </ContactItem>
-        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+        {/* <Payment src="https://i.ibb.co/Qfvn4z6/" /> */}
       </Right>
     </Container>
   );
